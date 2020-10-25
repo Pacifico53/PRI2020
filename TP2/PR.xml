@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE projectRecord SYSTEM "PR.dtd">
+<projectRecord>
+    <title>Project Record</title>
+    <data>
+        <key_name>TP2</key_name>
+        <title>DTD, XML e XPath</title>
+        <subtitle>Trabalho de casa sobre a aplicação de DTD, XML e XPath</subtitle>
+        <begin_date>19/10/2020</begin_date>
+        <end_date>26/10/10</end_date>
+        <supervisor href="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </data>
+    <team>
+        <element>
+            <name>Bernardo Viseu</name>
+            <email>a74618@alunos.uminho.pt</email>
+        </element>
+    </team>
+    <abstract>
+        <paragraph>
+            <line>Neste projecto foi realizado um ficheiro <bold>DTD</bold> a definir a estrutura de um PR, foi também feito este <bold>XML</bold> exemplo.</line>
+            <line>Foi também feito algumas queries em <italic>XPath</italic>. <ref href="https://en.wikipedia.org/wiki/XPath"></ref></line>
+        </paragraph>
+    </abstract>
+    <deliverables>
+        <ref href="https://github.com/Pacifico53/PRI2020">Repositório de PRI</ref>
+    </deliverables>
+</projectRecord>

@@ -1,0 +1,11 @@
+1. Todos os Arqueositios (IDENTI) de Amares:
+
+//ARQELEM[contains(CONCEL, 'Amares')]/IDENTI
+
+2. Todos os Arqueositios ligados ao termo "micáceo":
+
+//ARQELEM[//LIGA/@TERMO = 'micáceo']/IDENTI
+
+3. Todos os Arqueositios de Barcelos ligados ao termo "romanização":
+
+//ARQELEM[contains(CONCEL, 'Barcelos')][//LIGA/@TERMO = 'romanização']/IDENTI
