@@ -1,5 +1,5 @@
-<?xml version="2.0" encoding="UTF-8"?>
-<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="2.0">
     <xsl:output method="html" encoding="UTF-8" indent="yes"/>
 
     <xsl:template match="/">
@@ -24,7 +24,7 @@
     <!-- Templates para o indice -->
     <xsl:template match="ATOM" mode="indice">
         <li>
-            <a name="#i{generate-id()}">
+            <a name="#i{generate-id()}"/>
             <a href="{generate-id()}">
                 <xsl:value-of select="SYMBOL"/>
                 -
