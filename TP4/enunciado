@@ -1,0 +1,10 @@
+Ficheiro http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/arq.xml arqueositios nw portugues
+
+1- pegar no arq.xml e dentro de uma pasta arqelems/arqweb, gerar arq1.html, arq2.html, etc
+    para cada arqueositios
+    fazer index.html (indice de arqueositios)
+
+2- servidor node que responda: se localhost:XXXX/arqs1 serve primeiro, arqs2 serve 2ndo, etc
+    /* responde com indice.html
+
+3- substituir links no index.html por pedidos ao servidor
