@@ -1,0 +1,41 @@
+1. Registos sobre o RODA; 
+2. Registos ordenados por:
+    a. ordem descendente do ano
+    b. ordem ascendente de titulo
+3.Registos ordenados por:
+    a. ordem ascendente de type
+    b. ordem descendente de year
+    c. ordem ascendente de title
+
+
+s2: /pubs?_sort=year,title&_order=desc,asc
+
+Na db escola inserir um aluno:
+{
+        "id": "A44555",
+        "nome": "Ana Margarida Leite",
+        "dataNasc": "1981-4-19",
+        "curso": "CB8",
+        "anoCurso": "5",
+        "instrumento": "Guitarra"
+}
+{
+        "id": "A99999",
+        "nome": "Gregorio",
+        "dataNasc": "1999-9-30",
+        "curso": "CB1",
+        "anoCurso": "1",
+        "instrumento": "Clarinete"
+}
+
+A fazer:
+    -servidor node que responde em localhost:3001
+    -aos pedidos:
+        -index.html
+            Lista de Alunos (link para json-server)
+                -responde com lista html com a lista de Alunos
+                -cada linha e um link para o json-server do aluno
+            lista de cursos (link para json-server)
+            lista de instrumentos (link para json-server)
+            (voltar a inicial)
+            cada linha redireciona a pagina do aluno/curso
