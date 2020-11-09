@@ -5,6 +5,6 @@ Ficheiro http://www4.di.uminho.pt/~jcr/XML/didac/xmldocs/arq.xml arqueositios nw
     fazer index.html (indice de arqueositios)
 
 2- servidor node que responda: se localhost:XXXX/arqs1 serve primeiro, arqs2 serve 2ndo, etc
-    /* responde com indice.html
+    /arqs/* responde com indice.html
 
 3- substituir links no index.html por pedidos ao servidor
