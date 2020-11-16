@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE projectRecord SYSTEM "PR.dtd">
+<projectRecord>
+    <title>Project Record</title>
+    <data>
+        <key_name>TP5</key_name>
+        <title>Servidor NodeJS</title>
+        <subtitle>Trabalho de casa 5</subtitle>
+        <begin_date>09/11/2020</begin_date>
+        <end_date>16/11/10</end_date>
+        <supervisor href="http://www4.di.uminho.pt/~jcr/">José Carlos Ramalho</supervisor>
+    </data>
+    <team>
+        <element>
+            <name>Bernardo Viseu</name>
+            <email>a74618@alunos.uminho.pt</email>
+        </element>
+    </team>
+    <abstract>
+        <paragraph>
+            <line>Neste projecto foi definido um servidor NodeJS que reponda a pedidos sobre um dataset de uma escola de musica.</line>
+        </paragraph>
+    </abstract>
+    <deliverables>
+        <ref href="https://github.com/Pacifico53/PRI2020">Repositório de PRI</ref>
+    </deliverables>
+</projectRecord>
