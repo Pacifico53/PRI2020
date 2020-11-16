@@ -1,0 +1,19 @@
+{
+  "name": "aula6",
+  "version": "1.0.0",
+  "main": "server-ex1.js",
+  "dependencies": {
+    "axios": "^0.21.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server-ex2.js"
+  },
+  "author": "helena",
+  "license": "ISC",
+  "description": "ex1",
+  "keywords": [
+    "ex1"
+  ]
+}
