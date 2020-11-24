@@ -1,4 +1,3 @@
-const aluno = require('../models/aluno');
 var Aluno = require('../models/aluno');
 
 module.exports.listar = () => {

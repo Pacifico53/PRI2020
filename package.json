@@ -1,0 +1,22 @@
+{
+  "name": "pri2020",
+  "version": "1.0.0",
+  "description": "Processamento e Representação de Informação, Perfil PLC 20/21.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pacifico53/PRI2020.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pacifico53/PRI2020/issues"
+  },
+  "homepage": "https://github.com/Pacifico53/PRI2020#readme",
+  "devDependencies": {
+    "eslint": "^7.14.0"
+  }
+}

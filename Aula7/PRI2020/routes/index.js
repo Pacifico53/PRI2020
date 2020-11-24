@@ -14,4 +14,10 @@ router.get('/alunos', (req, res) => {
     .catch(e => res.render('error', {error: e}))
 })
 
+router.get('/alunos/registar', (req, res) => {
+  Aluno.listar()
+    .then(dados => res.render('alunos', {lista: dados}))
+    .catch(e => res.render('error', {error: e}))
+})
+
 module.exports = router;
