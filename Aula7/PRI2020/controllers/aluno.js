@@ -1,0 +1,19 @@
+const aluno = require('../models/aluno');
+var Aluno = require('../models/aluno');
+
+module.exports.listar = () => {
+    return Aluno
+        .find()
+        .exec()
+}
+
+module.exports.consultar = id => {
+    return Aluno
+        .findOne({_id: id})
+        .exec()
+}
+
+module.exports.inserir = a => {
+    var novo = new Aluno(a);
+    return novo.save();
+}

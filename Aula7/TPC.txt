@@ -1,0 +1,2 @@
+PRI2020: registo de alunos, listagem de alunos, consulta de aluno em particular
+FIX PRI2020 Nao encontra alunos
