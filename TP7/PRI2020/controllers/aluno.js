@@ -1,5 +1,6 @@
-var Aluno = require('../models/aluno');
+var Aluno = require('../models/aluno')
 
+// Devolve a lista de alunos
 module.exports.listar = () => {
     return Aluno
         .find()
@@ -15,6 +16,6 @@ module.exports.consultar = id => {
 }
 
 module.exports.inserir = a => {
-    var novo = new Aluno(a);
-    return novo.save();
+    var novo = new Aluno(a)
+    return novo.save()
 }

@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-const Aluno = require('../controllers/aluno');
+const Aluno = require('../controllers/aluno')
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -20,14 +20,21 @@ router.get('/alunos', (req, res) => {
         }))
 })
 
+
 router.get('/alunos/registar', (req, res) => {
-    Aluno.listar()
-        .then(dados => res.render('alunos', {
-            lista: dados
+    res.render('registo');
+})
+
+router.get('/alunos/:idAluno', (req, res) => {
+    var idAluno = req.params.idAluno;
+    Aluno.consultar(idAluno)
+        .then(dados => res.render('aluno', {
+            infoaluno: dados
         }))
         .catch(e => res.render('error', {
             error: e
         }))
 })
+
 
 module.exports = router;

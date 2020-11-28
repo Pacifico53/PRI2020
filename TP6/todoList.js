@@ -153,7 +153,7 @@ function geraPagVistoCancelado( lista, d){
     pagHTML += `
           </table>
           <div class="w3-container w3-teal">
-              <address>Gerado por Mariana Pereira::PRI2020 em ${d} --------------</address>
+              <address>Gerado por Bernardo Viseu::PRI2020 em ${d} --------------</address>
           </div>
       </body>
       </html>
