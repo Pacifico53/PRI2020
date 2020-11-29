@@ -19,3 +19,17 @@ module.exports.inserir = a => {
     var novo = new Aluno(a)
     return novo.save()
 }
+
+module.exports.eliminar = id => {
+    return Aluno
+        .deleteOne({
+            _id: id
+        })
+}
+
+module.exports.atualizar = (num, aluno) => {
+    return Aluno
+        .updateOne({
+            _id: num
+        }, aluno)
+}
