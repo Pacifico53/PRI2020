@@ -37,12 +37,16 @@ app.get('/files/upload', function (req, res) {
     res.end()
 })
 
+app.get('/download/:filename', function (req, res) {
+    res.download(__dirname + '/public/fileStore/' + req.params.filename)
+})
+
 app.post('/files', upload.single('myFile'), function (req, res) {
     //req.file is the 'myFile'
     //req.body will not hold the text fields if any
 
     let quarantinePath = __dirname + '/' + req.file.path
-    let newPath = __dirname + '/fileStore/' + req.file.originalname
+    let newPath = __dirname + '/public/fileStore/' + req.file.originalname
     fs.rename(quarantinePath, newPath, function (error) {
         if (error) {
             res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
