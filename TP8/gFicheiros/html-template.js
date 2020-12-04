@@ -62,6 +62,7 @@ function fileForm(d) {
             <meta charset="utf-8"/>
             <link rel="icon" href="/favicon.png"/>
             <link rel="stylesheet" href="/w3.css"/>
+            <script src="/jquery-3.5.1.min.js"></script>
             <script src="/plusone.js"></script>
         </head>
         <body>
@@ -73,10 +74,10 @@ function fileForm(d) {
             </div>
 
             <div class="w3-container w3-sand">
-                <form class="w3-container" action="/files" method="POST" enctype="multipart/form-data">
+                <form class="w3-container" action="/files" method="POST" enctype="multipart/form-data" id="submitions">
                     <label class="w3-text-teal"><b>Select file</b></label>
+                    <input class="w3-btn w3-blue-grey" id="submitbutton" type="submit" value="Submit"/>
                     <input class="w3-input w3-border w3-light-grey" type="file" name="myFile">
-                    <input class="w3-btn w3-blue-grey" type="submit" value="Submit"/>
                 </form>
                 <button class="w3-btn w3-blue-grey" onclick="addfile()">+1</button>
             </div>

@@ -41,34 +41,35 @@ app.get('/download/:filename', function (req, res) {
     res.download(__dirname + '/public/fileStore/' + req.params.filename)
 })
 
-app.post('/files', upload.single('myFile'), function (req, res) {
+app.post('/files', upload.array('myFile', 15), function (req, res) {
     //req.file is the 'myFile'
     //req.body will not hold the text fields if any
 
-    let quarantinePath = __dirname + '/' + req.file.path
-    let newPath = __dirname + '/public/fileStore/' + req.file.originalname
-    fs.rename(quarantinePath, newPath, function (error) {
-        if (error) {
-            res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
-            res.write('<p>Erro: ao mover o ficheiro da quarentena.</p>')
-            res.end()
-        }
-        else {
-            var d = new Date().toISOString().substr(0, 16);
-            var files = jsonfile.readFileSync('./dbFiles.json')
-
-            files.push({
-                date: d,
-                name: req.file.originalname,
-                mimetype: req.file.mimetype,
-                size: req.file.size
-            })
-
-            jsonfile.writeFileSync('./dbFiles.json', files)
-
-            res.redirect('/')
-        }
-    })
+    req.files.forEach(reqfile => {
+        let quarantinePath = __dirname + '/' + reqfile.path
+        let newPath = __dirname + '/public/fileStore/' + reqfile.originalname
+        fs.rename(quarantinePath, newPath, function (error) {
+            if (error) {
+                res.writeHead(200, { 'Content-Type': 'text/html;charset=utf-8' })
+                res.write('<p>Erro: ao mover o ficheiro da quarentena.</p>')
+                res.end()
+            }
+            else {
+                var d = new Date().toISOString().substr(0, 16);
+                var files = jsonfile.readFileSync('./dbFiles.json')
+    
+                files.push({
+                    date: d,
+                    name: reqfile.originalname,
+                    mimetype: reqfile.mimetype,
+                    size: reqfile.size
+                })
+    
+                jsonfile.writeFileSync('./dbFiles.json', files)
+            }
+        })    
+    });
+    res.redirect('/')
 })
 
 app.listen(7700, () => console.log('Listening on 7700'));
