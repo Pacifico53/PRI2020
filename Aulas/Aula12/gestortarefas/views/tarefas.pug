@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Lista de Tarefas
+  table.w3-table-all
+    tr
+      th Data
+      th Designação
+      th Responsável
+    each t of tarefas
+      tr
+        td= t.data
+        td= t.designacao
+        td= t.responsavel
